@@ -6,8 +6,20 @@ const config = require('./config.json');
  * @param {*} configObject 
  */
 function parseConfig(configObject) {
-    return _.map(configObject, (value, key) => {
-        console.log(value, key);
+    return _.mapValues(configObject, (value, key) => {
+        if (_.isString(value) && value.startsWith('@')) {
+            const formattedKey = _.chain(value)
+                .replace('@', '')
+                .snakeCase()
+                .toUpper()
+                .value();
+
+            if (!process.env[formattedKey]) {
+                throw new Error (`ENV VAR "${formattedKey}" NOT SET`);
+            }
+            return process.env[formattedKey];
+        }
+        return value;
     });
 }
 

@@ -5,4 +5,6 @@ const config = require('./config')
 const connector = new Builder.ChatConnector({
     appId: config.appId,
     appSecret: config.appSecret
-})
+});
+
+console.log(config);

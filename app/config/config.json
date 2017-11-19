@@ -1,4 +1,4 @@
 {
     "appId": "vendex.ico.bot",
-    "appSecret": "@appSecret"
+    "appSecret": "@vendexAppSecret"
 }
