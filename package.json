@@ -1,6 +1,37 @@
 {
+  "name": "ico.bot",
+  "description": "Experimental chatbot for running ICO crowdsales",
+  "version": "0.1.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
     "botbuilder": "^3.12.0",
     "restify": "^6.3.2"
-  }
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigmeech/ico.bot.git"
+  },
+  "keywords": [
+    "icos",
+    "chatbots",
+    "bots",
+    "rest",
+    "ethereum",
+    "api"
+  ],
+  "author": "Larry Eliemenye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigmeech/ico.bot/issues"
+  },
+  "homepage": "https://github.com/bigmeech/ico.bot#readme"
 }
