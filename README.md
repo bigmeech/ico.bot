@@ -13,7 +13,8 @@ Experimental chatbot for running ICO crowdsales
 - /info
 - /rules
 - /register
-- /add-address
-- /delete-address
-- /balance
+- /add {address}
+- /delete {address}
+- /request {amount} (1500 | 2500 | 5000)
+- /balance {address}
 - /help
