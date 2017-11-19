@@ -1,6 +1,17 @@
 {
-    "appId": "vendex.ico.bot",
-    "appSecret": "@appSecret",
+    "service":{
+        "appId": "vendex.ico.bot",
+        "appSecret": "@appSecret",
+        "port":"8020"
+    },
+    "fbmessenger": {
+        "fbAppId":"my_fb_app_id",
+        "fbAppSecret":"@fbAppSecret"
+    },
+    "telegram": {
+        "tgAppId":"tg_api_key",
+        "tgAppSecret":"@tgApiSecret"
+    },
     "mongodb":{
         "url":"mongodb://locahost/tokensale_db",
         "password":"@dbPassword"
