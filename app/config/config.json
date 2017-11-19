@@ -1,4 +1,8 @@
 {
     "appId": "vendex.ico.bot",
-    "appSecret": "@vendexAppSecret"
+    "appSecret": "@appSecret",
+    "mongodb":{
+        "url":"mongodb://locahost/tokensale_db",
+        "password":"@dbPassword"
+    }
 }
