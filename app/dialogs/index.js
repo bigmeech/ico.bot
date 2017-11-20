@@ -2,38 +2,54 @@ exports.info = function (session){
     session.endDialog('Vendex ICO info goes here');
 }
 
-exports.request = function (session) {
-    session.endDialog('Buy some tokens. Min = 1500 VEND');
+exports.purchase = function (session) {
+    session.endDialog(''
+        + 'Send some ether to Me and I will send some vend '
+        + 'into your token sale account after I get confirmation'
+    );
 }
 
-exports.rules = function (session) {
-    session.endDialog('Vendex ICO Rules go here');
-}
-
-exports.create = function (session) {
-    session.endDialog('Create address for user to send VEND token');
+exports.transfer = function (session) {
+    session.endDialog('Give me an ERC20 compliant address and '
+        + 'i will transfer VEND tokens from your token sale account'
+    );
 }
 
 exports.balance = function (session) {
-    session.endDialog('Checks balance of address created by US');
+    session.endDialog(''
+        + 'So you want to see the balance of your token sale account? of course i can do that'
+    );
+}
+
+exports.topup = function (session) {
+    session.endDialog(''
+        + 'Did i heard you say topup? You need to make sure you have a token sale account'
+    );
 }
 
 exports.register = function (session) {
-    session.endDialog('Register user for our ICO (Some users might want to start anonymous)')
-}
-
-exports.delete = function (session) {
-    session.endDialog('Delete Account: Make sure you dont have funds in it');
+    session.endDialog('Registration lets us remember '
+        + 'you and create a temporary token sale account. This account '
+        + 'will be managed by ME but you can ask me to send it to a wallet address of your choice'
+    );
 }
 
 exports.help = function (session) {
     session.endDialog('### Command Options '
         + '\n -----------------------------------------------------------------------'
-        + '\n - ```/info```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Displays some information for our token sales '
-        + '\n - ```/register```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Help us remember you' 
-        + '\n - ```/buy [units]```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Returns an address with the '
-        + '\n - ```/transfer [from] [to]```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - tranfer token to another address'
-        + '\n - ```/balance [addr] [to]```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - return balance of address'
-        + '\n - ```/help [addr] [to]```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - return balance of address'
+        + '\n```info```'
+        + '<br/>&nbsp;&nbsp;&nbsp; Displays some information for our token sales\n'
+        + '\n```register```' 
+        + '<br>&nbsp;&nbsp;&nbsp; Join the sale and get temporary account\n'
+        + '\n```purchase```' 
+        + '<br>&nbsp;&nbsp;&nbsp; Buy some VEND in exchange for some ETH\n'
+        + '\n```transfer```'
+        + `<br/>&nbsp;&nbsp;&nbsp; Transfer VEND from a TSA for specfied wallet address\n`
+        + '\n```balance```'
+        + '<br/>&nbsp;&nbsp;&nbsp; Check balance of your token sale account\n'
+        + '\n```topup```'
+        + '<br/>&nbsp;&nbsp;&nbsp; Buy some more VEND\n'
+        + '\n```help```'
+        + '<br/>&nbsp;&nbsp;&nbsp; Displays this message again\n'
     );
 }
