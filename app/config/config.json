@@ -1,8 +1,8 @@
 {
     "service":{
-        "appId": "vendex.ico.bot",
+        "appId": "896e3555-ef48-4b8f-83e3-7a384f491baa",
         "appSecret": "@appSecret",
-        "port":"8020"
+        "port":"8080"
     },
     "fbmessenger": {
         "fbAppId":"my_fb_app_id",
